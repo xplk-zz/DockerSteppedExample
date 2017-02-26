@@ -13,23 +13,12 @@ services:
     networks:
       - front
       - back
-  varnish:
-    image: tutum/varnish:4.0
-    environment:
-      LISTEN_PORT: 8081
-    ports:
-      - "8889:8081"
-    links:
-      - nginx
-    networks:
-      - front
   nginx:
     build:
       context: ./nginx/
     networks:
       front:
         aliases:
-          - "backend"
           - "our_app.dev"
     ports:
       - "8888:80"
