@@ -14,11 +14,6 @@ RUN yum -y install  \
             php70w-common \
             php70w-fpm
 
-# Install php DB driver
-RUN yum -y install php70w-mysql php70w-pdo
-
 WORKDIR /var/www/our_app
 
 ENTRYPOINT ["php-fpm", "-F"]
-
-EXPOSE 9000
