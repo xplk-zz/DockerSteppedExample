@@ -1,7 +1,0 @@
-version: '2'
-services:
-  app:
-    build:
-      context: ./our_app/
-    volumes:
-      - ../webroot:/var/www/our_app:Z
