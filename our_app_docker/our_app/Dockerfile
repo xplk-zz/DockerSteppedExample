@@ -14,9 +14,6 @@ RUN yum -y install  \
             php70w-common \
             php70w-fpm
 
-# Install php DB driver
-RUN yum -y install php70w-mysql php70w-pdo
-
 COPY ./php-fpm.conf /etc/php-fpm.conf
 COPY ./www.conf /etc/php-fpm.d/www.conf
 
