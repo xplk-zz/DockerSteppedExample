@@ -5,10 +5,3 @@ services:
       context: ./our_app/
     volumes:
       - ../webroot:/var/www/our_app:Z
-  nginx:
-    build:
-      context: ./nginx/
-    ports:
-      - "8888:80"
-    volumes_from:
-      - app
